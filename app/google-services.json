@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "920455626813",
+    "project_id": "hackathon-xii",
+    "storage_bucket": "hackathon-xii.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920455626813:android:1e94e1a18f21716117ea54",
+        "android_client_info": {
+          "package_name": "com.example.flipr_hackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920455626813-7bu3qej3fn4va86lgv4glqmedb7b5re5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDh5yRPW_R92-X0XhA32VAKu1VGvVq4aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920455626813-7bu3qej3fn4va86lgv4glqmedb7b5re5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
