@@ -13,11 +13,26 @@ public class driverModel {
     String truckcapacity;
     String transportername;
     String drivingexp;
+    String uid;
+    int type=1;
     Pair<String,String> p1,p2,p3;
 
-    public driverModel(String username, String password) {
+    public driverModel(String username, String password,int type) {
         this.username = username;
         this.password = password;
+        this.type=0;
+    }
+
+    public driverModel() {
+
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getUsername() {

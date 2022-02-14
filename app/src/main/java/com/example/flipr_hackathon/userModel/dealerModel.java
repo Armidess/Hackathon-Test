@@ -11,11 +11,25 @@ public class dealerModel {
     String nature = null;
     String weight = null;
     String quantity = null;
+    String uid=null;
+    int type=0;
     Pair<String,String> city = null;
 
-    public dealerModel(String username, String password) {
+    public dealerModel() {
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public dealerModel(String username, String password, int type) {
         this.username = username;
         this.password = password;
+        this.type=0;
     }
 
     public String getPassword() {

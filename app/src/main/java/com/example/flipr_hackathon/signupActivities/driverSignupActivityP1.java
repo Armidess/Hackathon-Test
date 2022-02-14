@@ -38,7 +38,7 @@ public class driverSignupActivityP1 extends AppCompatActivity {
             public void onClick(View v) {
                 if(binding.driverPassword.getText().toString().length()>8 && binding.driverUserName.getText().toString().length()>0 ) {
                     Intent intent = new Intent(driverSignupActivityP1.this, driverSignup.class);
-                    intent.putExtra("UserName", binding.driverUserName.getText().toString());
+                    intent.putExtra("Username", binding.driverUserName.getText().toString());
                     intent.putExtra("Password", binding.driverPassword.getText().toString());
                     startActivity(intent);
                     finish();
