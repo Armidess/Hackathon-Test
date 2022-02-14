@@ -72,6 +72,7 @@ public class dealerSignup extends AppCompatActivity {
                                 database.getReference().child("Dealer").child(auth.getUid()).setValue(user);
                                 database.getReference().child("Dealer").child(auth.getUid()).child("uid").setValue(auth.getUid());
                                 database.getReference().child("Dealer").child(auth.getUid()).child("type").setValue(0);
+
                                 startActivity(new Intent(dealerSignup.this, dealerMainActivity.class));
                                 finish();
                             }

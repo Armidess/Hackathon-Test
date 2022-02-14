@@ -66,9 +66,13 @@ public class driverSignup extends AppCompatActivity {
                 Pair<String,String> p1=new Pair<String,String>(binding.s1.getText().toString(),binding.c1.getText().toString());
                 Pair<String,String> p2=new Pair<String,String>(binding.s2.getText().toString(),binding.c2.getText().toString());
                 Pair<String,String> p3=new Pair<String,String>(binding.s3.getText().toString(),binding.c3.getText().toString());
+                Pair<String,String> p4=new Pair<String,String>(binding.ss1.getText().toString(),binding.cc1.getText().toString());
+                Pair<String,String> p5=new Pair<String,String>(binding.ss2.getText().toString(),binding.cc2.getText().toString());
+                Pair<String,String> p6=new Pair<String,String>(binding.ss3.getText().toString(),binding.cc3.getText().toString());
 
                 if(s1.length()>0 &&s2.length()>0 &&s3.length()>0 &&s4.length()>0 &&s5.length()>0 &&s6.length()>0 &&s7.length()>0 && p1.first.length()>0&&
-                        p1.second.length()>0&&p2.first.length()>0&&p2.second.length()>0&&p3.first.length()>0&&p3.second.length()>0){
+                        p1.second.length()>0&&p2.first.length()>0&&p2.second.length()>0&&p3.first.length()>0&&p3.second.length()>0&&p4.first.length()>0&&p4.second.length()>0
+                        &&p6.first.length()>0&&p6.second.length()>0&&p5.first.length()>0&&p5.second.length()>0){
                     String a=null,b=null;
                     a=getIntent().getStringExtra("Username");
                     b=getIntent().getStringExtra("Password");
@@ -83,6 +87,9 @@ public class driverSignup extends AppCompatActivity {
                     user.setP1(p1);
                     user.setP2(p2);
                     user.setP3(p3);
+                    user.setP4(p4);
+                    user.setP5(p5);
+                    user.setP6(p6);
                     auth.createUserWithEmailAndPassword(a,b).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {

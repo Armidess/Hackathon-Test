@@ -15,12 +15,37 @@ public class driverModel {
     String drivingexp;
     String uid;
     int type=1;
-    Pair<String,String> p1,p2,p3;
+    Pair<String,String> p1,p2,p3,p4,p5,p6;
 
     public driverModel(String username, String password,int type) {
         this.username = username;
         this.password = password;
         this.type=0;
+    }
+
+
+    public Pair<String, String> getP4() {
+        return p4;
+    }
+
+    public void setP4(Pair<String, String> p4) {
+        this.p4 = p4;
+    }
+
+    public Pair<String, String> getP5() {
+        return p5;
+    }
+
+    public void setP5(Pair<String, String> p5) {
+        this.p5 = p5;
+    }
+
+    public Pair<String, String> getP6() {
+        return p6;
+    }
+
+    public void setP6(Pair<String, String> p6) {
+        this.p6 = p6;
     }
 
     public driverModel() {
