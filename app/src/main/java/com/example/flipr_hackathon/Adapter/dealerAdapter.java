@@ -58,13 +58,13 @@ public class dealerAdapter extends RecyclerView.Adapter<dealerAdapter.viewHolder
         holder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("Naman Noob1");
+                //System.out.println("Naman Noob1");
                 try {
                     database.getReference().child("Booked").child(s1).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             Pp1[0] = snapshot.getValue().toString();
-                            System.out.println("try"+Pp1[0]);
+                            //System.out.println("try"+Pp1[0]);
                         }
 
                         @Override

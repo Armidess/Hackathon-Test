@@ -2,7 +2,9 @@ package com.example.flipr_hackathon.userModel;
 
 import android.util.Pair;
 
-public class dealerModel {
+import java.io.Serializable;
+
+public class dealerModel implements Serializable {
 
     String name = null;
     String username = null;
@@ -30,6 +32,14 @@ public class dealerModel {
         this.username = username;
         this.password = password;
         this.type=0;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 
     public String getPassword() {

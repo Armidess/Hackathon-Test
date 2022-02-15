@@ -42,8 +42,8 @@ public class dealerMainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
-
-
+        dealerModel dealer = (dealerModel) getIntent().getSerializableExtra("User");
+        System.out.println("Dealer Model " +dealer);
         ArrayList<driverModel> driverlist = new ArrayList<>();
         final Pair<String, String>[] pair = new Pair[]{null};
         database.getReference().child("Dealer").addValueEventListener(new ValueEventListener() {
@@ -71,8 +71,6 @@ public class dealerMainActivity extends AppCompatActivity {
         database.getReference().child("Driver").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-
                 for(DataSnapshot data : snapshot.getChildren()){
                     Map<String, Object> map  = (Map) data.getValue();
                     Map P1  = (Map) map.get("p1");
@@ -109,7 +107,6 @@ public class dealerMainActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(dealerMainActivity.this, "Database Cancelled", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -65,15 +65,18 @@ public class dealerSignup extends AppCompatActivity {
                     user.setWeight(binding.f4.getText().toString());
                     user.setQuantity(binding.f5.getText().toString());
                     user.setCity(new Pair<String,String>(binding.f6.getText().toString(),binding.f7.getText().toString()));
-                                        auth.createUserWithEmailAndPassword(s1,s2).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    user.setUid(auth.getUid());
+                    user.setType(0);
+                    auth.createUserWithEmailAndPassword(s1,s2).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
                                 database.getReference().child("Dealer").child(auth.getUid()).setValue(user);
-                                database.getReference().child("Dealer").child(auth.getUid()).child("uid").setValue(auth.getUid());
-                                database.getReference().child("Dealer").child(auth.getUid()).child("type").setValue(0);
-
-                                startActivity(new Intent(dealerSignup.this, dealerMainActivity.class));
+                                //database.getReference().child("Dealer").child(auth.getUid()).child("uid").setValue(auth.getUid());
+                                //database.getReference().child("Dealer").child(auth.getUid()).child("type").setValue(0);
+                                Intent intent = new Intent(dealerSignup.this,dealerMainActivity.class);
+                                intent.putExtra("User",user);
+                                startActivity(intent);
                                 finish();
                             }
                             else{

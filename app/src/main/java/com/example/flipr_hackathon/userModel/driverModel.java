@@ -2,7 +2,9 @@ package com.example.flipr_hackathon.userModel;
 
 import android.util.Pair;
 
-public class driverModel {
+import java.io.Serializable;
+
+public class driverModel implements Serializable {
 
     String name;
     String username;
